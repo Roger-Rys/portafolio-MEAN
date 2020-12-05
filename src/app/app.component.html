@@ -1,0 +1,19 @@
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<header>
+  <ul>
+    <li><a routerLink="/sobre-mi" routerLinkActive="active">Sobre Mi</a></li>
+    <li><a routerLink="/proyectos" routerLinkActive="active">Proyectos</a></li>
+    <li id="logo"><a href="#">Ryes</a></li>
+    <li><a routerLink="/crear-proyectos" routerLinkActive="active">Crear</a></li>
+    <li><a routerLink="/contactos" routerLinkActive="active">Contactos</a></li>
+  </ul>
+</header>
+
+<div class="clearfix"></div>
+
+<section id="content">
+  <router-outlet></router-outlet>  
+</section>
+
+<footer>Todos los derechos reservados &copy;</footer>
+

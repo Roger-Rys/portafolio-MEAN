@@ -22,6 +22,7 @@ export class ProyectService{
  		return 'Testing of service angular';
 	}
 
+
 	/** POST: add a new projects to the database */
 	saveProject(projects:Project):Observable<any>{
 		//ref: https://angular.io/guide/http#making-a-post-request
@@ -31,4 +32,11 @@ export class ProyectService{
 		
 		return this._http.post(this.url+"save-project", params, httpOptions);		
 	}
+
+
+	//Obtain the projects
+	getProjects():Observable<any>{
+		const httpOptions = {headers: new HttpHeaders({"Content-type": "application/json"})};		
+		return this._http.get(this.url+"projects",httpOptions);
+	}	
 }

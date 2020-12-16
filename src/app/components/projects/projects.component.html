@@ -1,1 +1,12 @@
-<p>projects works!</p>
+<div class="container">
+	<h1>{{title}}</h1>
+	<div *ngIf="projects">
+		<ul>
+			<li *ngFor="let element of projects; index as i">
+				<h3>{{element.name}}</h3> 
+				<p>Des: {{element.description}}</p>
+				<p>Cat: {{element.category}}</p>					
+			</li>
+		</ul>
+	</div>	
+</div>
